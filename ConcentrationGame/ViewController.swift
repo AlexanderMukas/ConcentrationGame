@@ -23,9 +23,11 @@ class ViewController: UIViewController {
     func flipbutton(emoji: String, button: UIButton) {
         if button.currentTitle == emoji {
             button.setTitle("", for: .normal)
+            button.titleLabel?.font = .systemFont(ofSize: 50)
             button.backgroundColor = UIColor.systemBlue
         } else {
             button.setTitle(emoji, for: .normal)
+            button.titleLabel?.font = .systemFont(ofSize: 50)
             button.backgroundColor = UIColor.white
         }
     }
