@@ -9,16 +9,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        //some code
-        // some code again...
+    
+    
+    
+    
+    
+    
+    @IBOutlet var buttonCollection: [UIButton]!
+    @IBOutlet weak var touchLabel: UILabel!
+    @IBAction func buttonAction(_ sender: UIButton) {
+        
+        
     }
-    /*
-     Dev branch
-     */
-
-
+    
+    
+    
+    
 }
 
