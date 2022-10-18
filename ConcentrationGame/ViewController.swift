@@ -21,17 +21,19 @@ class ViewController: UIViewController {
     
     // function of flipping card
     func flipbutton(emoji: String, button: UIButton) {
+        
+        button.titleLabel?.font = .systemFont(ofSize: 65)
+        
         if button.currentTitle == emoji {
             button.setTitle("", for: .normal)
-            button.titleLabel?.font = .systemFont(ofSize: 50)
             button.backgroundColor = UIColor.systemBlue
         } else {
             button.setTitle(emoji, for: .normal)
-            button.titleLabel?.font = .systemFont(ofSize: 50)
             button.backgroundColor = UIColor.white
         }
     }
     
+    let emojiCollection: Array = ["🦊", "🐰", "🦊", "🐰"]
     
     
     //@IBOutlet weak var resetBtn: UIButton!
@@ -46,7 +48,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var touchLabel: UILabel!
     @IBAction func buttonAction(_ sender: UIButton) {
         touches += 1
-        flipbutton(emoji: "🦊", button: sender)
+        let buttonIndex = buttonCollection.firstIndex(of: sender)
+        flipbutton(
+                emoji: emojiCollection[buttonIndex!],
+                button: sender
+            )
         
     }
     
